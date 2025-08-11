@@ -11,7 +11,7 @@ import jakarta.persistence.*;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "guides")
-public class Guide {
+public class GuideModel {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
