@@ -10,7 +10,9 @@
     <a href="/">DCO Hub</a>
   </nav>
   
-  <div th:replace="${content}"></div>
+  <div th:fragment="layout(title, content)">
+    <div th:replace="${content}"></div>
+  </div>
   
   <footer>2025 DCO Hub</footer>
 </body>
