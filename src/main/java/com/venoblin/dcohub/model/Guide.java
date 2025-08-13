@@ -22,7 +22,7 @@ public class Guide {
   @Column(nullable = false)
   private String title;
   
-  @Column(columnDefinition = "TEXT")
+  @Column(columnDefinition = "TEXT", nullable = false)
   private String content;
 
   @ElementCollection
