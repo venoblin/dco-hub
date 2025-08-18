@@ -1,0 +1,29 @@
+:root {
+  --bg-color: black;
+  --text-color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'Mozilla';
+  src: url("../fonts/MozillaHeadline-Regular.ttf");
+}
+
+body {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
