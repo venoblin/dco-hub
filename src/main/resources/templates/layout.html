@@ -8,12 +8,12 @@
   <link rel="stylesheet" th:href="@{/styles/layout.css}" />
 </head>
 <body>
-  <nav>
+  <nav class="layout-nav">
     <a href="/">DCO Hub</a>
   </nav>
   
-  <div th:replace="${content}"></div>
+  <main th:replace="${content}"></main>
   
-  <footer>2025 DCO Hub</footer>
+  <footer class="layout-nav">2025 DCO Hub</footer>
 </body>
 </html>

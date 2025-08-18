@@ -3,3 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'Mozilla';
+  src: url("../fonts/MozillaHeadline-Regular.ttf");
+}
+
+body {
+  font-family: 'Mozilla';
+}
