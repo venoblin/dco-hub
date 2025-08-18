@@ -1,3 +1,20 @@
+:root {
+  --nav-width: 200px;
+}
+
 .layout-nav {
-  
+  background: var(--overlay-bg-color);
+  height: 100vh;
+  width: var(--nav-width);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0.5rem;
+}
+
+main,
+footer {
+  padding: 1rem;
+  padding-left: calc(var(--nav-width) + 1rem);
 }
