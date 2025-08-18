@@ -10,7 +10,12 @@
 </head>
 <body>
   <nav class="layout-nav">
-    <a href="/">DCO Hub</a>
+    <p class="logo">DCO Hub</p>
+
+    <div class="links-wrap">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/guides">Guides</a>
+    </div>
   </nav>
   
   <main th:replace="${content}"></main>
