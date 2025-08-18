@@ -1,6 +1,9 @@
 :root {
-  --bg-color: black;
-  --text-color: white;
+  --bg-color: #14142b;
+  --text-color: #d5d9e5;
+  --overlay-bg-color: #24263a;
+  --accent-color: #72fa93;
+  --danger-color: #c13642;
 }
 
 * {
