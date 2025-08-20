@@ -16,4 +16,9 @@ public class RoutesController {
   public String guides(Model model) {
     return "guides";
   }
+
+  @GetMapping("/guides/new")
+  public String newGuide(Model model) {
+    return "newGuide";
+  }
 }
