@@ -3,9 +3,14 @@ const guideForm = document.getElementById('new-guide-form')
 guideForm.addEventListener('submit', async (event) => {
   event.preventDefault()
 
-  const guideAuthor = document.getElementById('author').value
-  const guideTitle = document.getElementById('title').value
-  const guideContent = document.getElementById('content').value
+  const formData = new FormData(event.target)
+  const data = Object.fromEntries(formData.entries())
 
-  console.log(guideAuthor, guideTitle, guideContent)
+  const res = await fetch('/api/guides', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
 })
