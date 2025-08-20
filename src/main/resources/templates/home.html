@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::main}, ~{::scripts})}">
-<head>
-  <title>DCO Hub - Home</title>  
-</head>
-<body>
-  <main>
-    <h1>Home</h1>
-  </main>  
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}">
+  <head>
+    <title>DCO Hub - Home</title>
+    
+    <th:block th:fragment="styles"></th:block>
+  </head>
+  <body>
+    <main>
+      <h1>Home</h1>
+    </main>  
 
-  <th:block th:fragment="scripts"></th:block>
-</body>
+    <th:block th:fragment="scripts"></th:block>
+  </body>
 </html>

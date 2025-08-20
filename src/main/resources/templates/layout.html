@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, content, scripts)">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title th:replace="${title}"></title>
-  
-  <link rel="stylesheet" th:href="@{/styles/global.css}" />
-  <link rel="stylesheet" th:href="@{/styles/layout.css}" />
-</head>
-<body>
-  <nav class="layout-nav">
-    <p class="logo">DCO Hub</p>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, styles, content, scripts)">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}"></title>
     
-    <div class="links-wrap">
-      <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="/guides">Guides</a>
-    </div>
-  </nav>
-  
-  <main th:replace="${content}"></main>
-  
-  <footer>2025 DCO Hub</footer>
-  
-  <th:block th:replace="${scripts}"></th:block>
-</body>
+    <link rel="stylesheet" th:href="@{/styles/global.css}" />
+    <link rel="stylesheet" th:href="@{/styles/layout.css}" />
+
+    <th:block th:replace="${styles}"></th:block>
+  </head>
+  <body>
+    <nav class="layout-nav">
+      <p class="logo">DCO Hub</p>
+      
+      <div class="links-wrap">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/guides">Guides</a>
+      </div>
+    </nav>
+    
+    <main th:replace="${content}"></main>
+    
+    <footer>2025 DCO Hub</footer>
+    
+    <th:block th:replace="${scripts}"></th:block>
+  </body>
 </html>

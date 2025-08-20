@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::main}, ~{::scripts})}">
-<head>
-  <title>DCO Hub - Guides</title>
-  
-</head>
-<body>
-  <main>
-    <a href="/guides/new">Create Guide</a>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}">
+  <head>
+    <title>DCO Hub - Guides</title>
+
+    <th:block th:fragment="styles"></th:block>
+  </head>
+  <body>
+    <main>
+      <a href="/guides/new">Create Guide</a>
+      
+      <h1>Guides</h1>
+    </main>  
     
-    <h1>Guides</h1>
-  </main>  
-  
-  <th:block th:fragment="scripts">
-    <script type="text/javascript" th:src="@{/scripts/guides.js}"></script>
-  </th:block>
-</body>
+    <th:block th:fragment="scripts">
+      <script type="text/javascript" th:src="@{/scripts/guides.js}"></script>
+    </th:block>
+  </body>
 </html>

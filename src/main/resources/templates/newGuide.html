@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::main}, ~{::scripts})}">
-<head>
-  <title>DCO Hub - New Guide</title>
-</head>
-<body>
-  <main>
-    <h1>New Guide</h1>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}">
+  <head>
+    <title>DCO Hub - New Guide</title>
+
+    <th:block th:fragment="styles">
+      <link rel="stylesheet" th:href="@{/styles/newGuide.css}" />
+    </th:block>
+  </head>
+  <body>
+    <main>
+      <h1>New Guide</h1>
+      
+      <form class="new-guide-form" id="new-guide-form">
+        <div>
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" />
+        </div>
+
+        <div>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" />
+        </div>
+
+        <div>
+          <label for="content">Content</label>  
+          <textarea name="content" id="content" rows="5" cols="30"></textarea>
+        </div>
+
+        <button type="submit">Create</button>
+      </form>
+    </main>  
     
-    <form>
-      <label for="author">Author</label>
-      <input type="text" name="author" id="author" />
-
-      <label for="title">Title</label>
-      <input type="text" name="title" id="title" />
-
-      <label for="content">Content</label>  
-      <textarea name="content" id="textarea"></textarea>
-    </form>
-  </main>  
-  
-  <th:block th:fragment="scripts">
-    <script type="text/javascript" th:src="@{/scripts/newGuide.js}"></script>
-  </th:block>
-</body>
+    <th:block th:fragment="scripts">
+      <script type="text/javascript" th:src="@{/scripts/newGuide.js}"></script>
+    </th:block>
+  </body>
 </html>
