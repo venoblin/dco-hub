@@ -6,11 +6,15 @@ guideForm.addEventListener('submit', async (event) => {
   const formData = new FormData(event.target)
   const data = Object.fromEntries(formData.entries())
 
-  const res = await fetch('/api/guides', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
+  try {
+    const res = await fetch('/api/guides', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+  } catch (error) {
+    console.log(error)
+  }
 })
