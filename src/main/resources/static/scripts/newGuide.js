@@ -14,6 +14,9 @@ guideForm.addEventListener('submit', async (event) => {
       },
       body: JSON.stringify(data)
     })
+
+    if (res.ok) {
+    }
   } catch (error) {
     console.log(error)
   }
