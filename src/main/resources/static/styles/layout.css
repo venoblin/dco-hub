@@ -7,12 +7,24 @@
   left: 0;
   top: 0;
   bottom: 0;
-  padding: 0.5rem;
-  border-right: var(--border-width) solid var(--muted-text-color);
+  padding: 1rem;
+  border-right: var(--border-width) solid var(--overlay-bg-color);
 }
 
 main,
 footer {
   padding: 1rem;
   padding-left: calc(var(--nav-width) + 1rem);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--border-width) solid var(--overlay-bg-color);
+  padding-bottom: 0.5rem;
+}
+
+.logo p {
+  margin-left: 0.5rem;
 }
