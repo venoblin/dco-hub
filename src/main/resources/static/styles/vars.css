@@ -7,5 +7,6 @@
   --danger-color: #c13642;
   --border-width: 0.75px;
   --nav-width: 200px;
+  --nav-height: 60px;
   --default-transition: 0.1s ease-in-out;
 }
