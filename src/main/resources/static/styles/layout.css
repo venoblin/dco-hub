@@ -7,23 +7,31 @@
   left: 0;
   top: 0;
   bottom: 0;
-  padding: 1rem;
+  padding: var(--default-spacing);
   border-right: var(--border-width) solid var(--overlay-bg-color);
 }
 
 main,
 footer {
-  padding: 1rem;
-  padding-left: calc(var(--nav-width) + 1rem);
+  padding: var(--default-spacing);
+  padding-left: calc(var(--nav-width) + var(--default-spacing));
+}
+
+main {
+  padding-top: calc(var(--nav-height) + var(--default-spacing));
 }
 
 main header {
-  border-bottom: var(--border-width) solid var(--overlay-bg-color);
-  padding-bottom: 0.5rem;
+  width: calc(100vw - var(--nav-width) - (var(--default-spacing) * 2));
   height: var(--nav-height);
-  margin-bottom: 1rem;
+  background: var(--bg-color);
+  border-bottom: var(--border-width) solid var(--overlay-bg-color);
+  padding: 1rem 0 0.5rem 0;
+  margin-bottom: var(--default-spacing);
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
 }
 
 main header h1 {

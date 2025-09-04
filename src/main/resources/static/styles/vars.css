@@ -9,4 +9,6 @@
   --nav-width: 200px;
   --nav-height: 60px;
   --default-transition: 0.1s ease-in-out;
+  --default-spacing: 1rem;
+  --default-border-radius: 1rem;
 }
