@@ -17,6 +17,19 @@ footer {
   padding-left: calc(var(--nav-width) + 1rem);
 }
 
+main header {
+  border-bottom: var(--border-width) solid var(--overlay-bg-color);
+  padding-bottom: 0.5rem;
+  height: var(--nav-height);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+main header h1 {
+  margin-bottom: 0;
+}
+
 footer {
   display: flex;
   align-content: center;
