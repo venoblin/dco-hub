@@ -18,16 +18,15 @@ footer {
 }
 
 main {
-  padding-top: calc(var(--nav-height) + var(--default-spacing));
+  padding-top: calc(var(--nav-height) + (var(--default-spacing) * 2));
 }
 
 main header {
   width: calc(100vw - var(--nav-width) - (var(--default-spacing) * 2));
-  height: var(--nav-height);
+  height: calc(var(--nav-height) + var(--default-spacing));
   background: var(--bg-color);
   border-bottom: var(--border-width) solid var(--overlay-bg-color);
   padding: 1rem 0 0.5rem 0;
-  margin-bottom: var(--default-spacing);
   display: flex;
   align-items: center;
   position: fixed;
