@@ -62,3 +62,53 @@ h2,
 h3 {
   font-family: 'Mozilla-Regular', Helvetica, Arial, sans-serif;
 }
+
+button,
+a,
+input {
+  font-size: 1.1em;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  position: absolute;
+  left: -999999px;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  border: none;
+  text-decoration: none;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  transition: opacity 0.1s ease-in-out;
+}
+
+input,
+textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  outline: none;
+  border: var(--border-width) solid var(--overlay-bg-color);
+  background: var(--text-color);
+  color: var(--bg-color);
+  transition: border var(--default-transition), color var(--default-transition);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-color);
+}
