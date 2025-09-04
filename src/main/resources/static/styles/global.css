@@ -26,14 +26,14 @@ body {
 }
 
 path {
-  transition: fill var(--default-transition);
+  transition: fill var(--default-transition), opacity var(--default-transition);
 }
 
 .nav-link {
   display: block;
   color: var(--muted-text-color);
   text-decoration: none;
-  transition: color var(--default-transition);
+  transition: color var(--default-transition), opacity var(--default-transition);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,6 +45,15 @@ path {
 }
 
 .nav-link:hover path {
+  fill: var(--accent-color);
+}
+
+.nav-link.active {
+  opacity: 0.8;
+  color: var(--accent-color);
+}
+
+.nav-link.active path {
   fill: var(--accent-color);
 }
 
