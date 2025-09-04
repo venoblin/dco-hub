@@ -18,6 +18,7 @@ footer {
 }
 
 main {
+  max-width: 500px;
   padding-top: calc(var(--nav-height) + (var(--default-spacing) * 2));
 }
 
