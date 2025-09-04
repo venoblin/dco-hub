@@ -1,0 +1,10 @@
+:root {
+  --bg-color: #171c1b;
+  --text-color: #F6F7EB;
+  --muted-text-color: #989898;
+  --overlay-bg-color: #262424;
+  --accent-color: #72fa93;
+  --danger-color: #c13642;
+  --border-width: 0.75px;
+  --nav-width: 200px;
+}

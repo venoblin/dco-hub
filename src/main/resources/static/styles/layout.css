@@ -1,9 +1,6 @@
-:root {
-  --nav-width: 200px;
-}
+@import './vars.css';
 
 .layout-nav {
-  background: var(--overlay-bg-color);
   height: 100vh;
   width: var(--nav-width);
   position: fixed;
@@ -11,6 +8,7 @@
   top: 0;
   bottom: 0;
   padding: 0.5rem;
+  border-right: var(--border-width) solid var(--muted-text-color);
 }
 
 main,
