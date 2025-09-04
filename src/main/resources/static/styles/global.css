@@ -25,8 +25,23 @@ body {
   color: var(--text-color);
 }
 
+path {
+  transition: fill var(--default-transition);
+}
+
 .nav-link {
   display: block;
+  color: var(--muted-text-color);
+  text-decoration: none;
+  transition: color var(--default-transition);
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-link:hover path {
+  fill: var(--accent-color);
 }
 
 h1,
