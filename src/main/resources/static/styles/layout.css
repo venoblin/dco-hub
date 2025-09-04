@@ -17,6 +17,12 @@ footer {
   padding-left: calc(var(--nav-width) + 1rem);
 }
 
+footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .logo {
   display: flex;
   justify-content: center;

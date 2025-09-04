@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" th:href="@{/favicon.png}" sizes="any" />
+    <link rel="icon" th:href="@{/favicon.svg}" type="image/svg+xml" />
+    
     <title th:replace="${title}"></title>
     
     <link rel="stylesheet" th:href="@{/styles/global.css}" />
@@ -42,7 +46,9 @@
     
     <main th:replace="${content}"></main>
     
-    <footer>2025 DCO Hub</footer>
+    <footer>
+      <p>2025 DCO Hub</p>
+    </footer>
     
     <th:block th:replace="${scripts}"></th:block>
     <script type="text/javascript" th:src="@{/scripts/global.js}"></script>

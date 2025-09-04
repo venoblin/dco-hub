@@ -84,6 +84,7 @@ label {
   left: -999999px;
 }
 
+.btn,
 button {
   cursor: pointer;
   display: block;
@@ -94,9 +95,10 @@ button {
   width: fit-content;
   padding: 0.25rem 0.5rem;
   border-radius: 10px;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity var(--default-transition);
 }
 
+.btn:hover,
 button:hover {
   opacity: 0.8;
 }
