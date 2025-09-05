@@ -65,8 +65,10 @@ h3 {
 
 button,
 a,
-input {
-  font-size: 1.1em;
+input,
+textarea,
+p {
+  font-size: 1.15em;
 }
 
 h1 {
@@ -117,4 +119,15 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: var(--accent-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: margin var(--default-transition), opacity var(--default-transition);
+}
+
+a:hover {
+  opacity: 0.8;
+  margin-left: 1px;
 }

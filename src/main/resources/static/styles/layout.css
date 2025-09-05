@@ -14,6 +14,8 @@
 .main-wrap {
   padding: var(--default-spacing);
   padding-left: calc(var(--nav-width) + var(--default-spacing));
+  display: flex;
+  align-items: center;
 }
 
 main, 
@@ -35,7 +37,7 @@ main header {
   align-items: center;
   position: sticky;
   top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: var(--default-spacing);
 }
 
 main header h1 {

@@ -1,4 +1,7 @@
+@import './vars.css';
+
 .new-guide-form {
+  margin-top: var(--default-spacing);
   max-width: 500px;
 }
 
@@ -9,5 +12,5 @@
 }
 
 .new-guide-form div:last-of-type {
-  margin-bottom: 1rem;
+  margin-bottom: var(--default-spacing);
 }
