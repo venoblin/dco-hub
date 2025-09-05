@@ -14,12 +14,12 @@
 .main-wrap {
   padding: var(--default-spacing);
   padding-left: calc(var(--nav-width) + var(--default-spacing));
-  display: flex;
-  align-items: center;
 }
 
 main, 
 footer {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
 }
 

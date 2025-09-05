@@ -23,6 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-color);
   color: var(--text-color);
+  max-width: 2000px;
 }
 
 path {
