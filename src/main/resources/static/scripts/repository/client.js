@@ -9,7 +9,7 @@ class Client {
     let cleanedEndpoint = endpoint
 
     if (cleanedEndpoint[0] === '/') {
-      cleanedEndpoint = cleanedEndpoint.slice(1, -1)
+      cleanedEndpoint = cleanedEndpoint.slice(1)
     }
 
     return `${this.#baseUrl}/${cleanedEndpoint}`

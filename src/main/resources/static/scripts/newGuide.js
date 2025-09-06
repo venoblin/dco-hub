@@ -1,7 +1,5 @@
 import { postGuide } from './service/guidesService.js'
 
-postGuide()
-
 const guideForm = document.getElementById('new-guide-form')
 
 guideForm.addEventListener('submit', async (event) => {
@@ -9,4 +7,6 @@ guideForm.addEventListener('submit', async (event) => {
 
   const formData = new FormData(event.target)
   const data = Object.fromEntries(formData.entries())
+
+  await postGuide(data)
 })
