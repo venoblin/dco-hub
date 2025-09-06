@@ -69,7 +69,7 @@ a,
 input,
 textarea,
 p {
-  font-size: 1.15em;
+  font-size: 1em;
 }
 
 h1 {
@@ -78,7 +78,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin-bottom: 0.5rem;
 }
 
@@ -155,4 +155,8 @@ a:hover {
 .guide-card:last-of-type {
   padding-bottom: 0;
   border-bottom: none;
+}
+
+.guide-card .author {
+  color: var(--muted-text-color);
 }

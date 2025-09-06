@@ -8,21 +8,16 @@ const createGuide = (guide) => {
   const guideElem = document.createElement('div')
   guideElem.classList.add('guide-card')
 
-  const authorElem = document.createElement('p')
-  authorElem.classList.add('author')
-  authorElem.innerText = guide.author
-
-  const titleElem = document.createElement('p')
+  const titleElem = document.createElement('h2')
   titleElem.classList.add('title')
   titleElem.innerText = guide.title
 
-  const contentElem = document.createElement('p')
-  contentElem.classList.add('content')
-  contentElem.innerText = guide.content
+  const authorElem = document.createElement('p')
+  authorElem.classList.add('author')
+  authorElem.innerText = `By ${guide.author}`
 
-  guideElem.appendChild(authorElem)
   guideElem.appendChild(titleElem)
-  guideElem.appendChild(contentElem)
+  guideElem.appendChild(authorElem)
 
   guidesContainer.appendChild(guideElem)
 }
