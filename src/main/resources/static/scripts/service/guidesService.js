@@ -1,3 +1,5 @@
+import { API } from '../repository/api'
+
 export const postGuide = () => {
-  console.log('hi')
+  API.constructEndpoint('/guides')
 }

@@ -5,7 +5,7 @@ class Client {
     this.#baseUrl = baseUrl
   }
 
-  #constructUrl = (endpoint) => {
+  constructUrl = (endpoint) => {
     let cleanedEndpoint = endpoint
 
     if (cleanedEndpoint[0] === '/') {
@@ -22,3 +22,5 @@ class Client {
     } catch (error) {}
   }
 }
+
+export default Client
