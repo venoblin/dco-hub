@@ -9,3 +9,13 @@ export const postGuide = async (payload) => {
     console.log(error)
   }
 }
+
+export const getGuides = async () => {
+  try {
+    const res = await API.get('/guides')
+
+    console.log(res)
+  } catch (error) {
+    console.log(error)
+  }
+}

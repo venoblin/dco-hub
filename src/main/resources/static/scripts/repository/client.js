@@ -32,6 +32,18 @@ class Client {
       throw new Error(error)
     }
   }
+
+  async get(endpoint) {
+    try {
+      const res = await fetch(`${this.#constructUrl(endpoint)}`)
+
+      if (res.ok) {
+        return res
+      }
+    } catch (error) {
+      throw new Error(error)
+    }
+  }
 }
 
 export default Client
