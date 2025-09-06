@@ -1,5 +1,3 @@
-import { API } from '../repository/api'
+import { API } from '../repository/api.js'
 
-export const postGuide = () => {
-  API.constructEndpoint('/guides')
-}
+export const getGuides = async () => {}

@@ -5,21 +5,32 @@ class Client {
     this.#baseUrl = baseUrl
   }
 
-  constructUrl = (endpoint) => {
+  #constructUrl = (endpoint) => {
     let cleanedEndpoint = endpoint
 
     if (cleanedEndpoint[0] === '/') {
-      cleanedEndpoint.splice(0, 1)
+      cleanedEndpoint = cleanedEndpoint.slice(1, -1)
     }
-    console.log(cleanedEndpoint)
 
     return `${this.#baseUrl}/${cleanedEndpoint}`
   }
 
-  async get(endpoint) {
+  async post(endpoint, payload) {
     try {
-      const res = await fetch()
-    } catch (error) {}
+      const res = await fetch(`${this.#constructUrl(endpoint)}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+
+      if (res.ok) {
+        return res
+      }
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 }
 
