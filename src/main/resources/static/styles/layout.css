@@ -25,6 +25,7 @@ footer {
 
 main {
   position: relative;
+  min-height: 90vh;
 }
 
 main header {
