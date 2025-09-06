@@ -4,7 +4,7 @@ export const postGuide = async (payload) => {
   try {
     const res = await API.post('/guides', payload)
 
-    console.log(res)
+    return res
   } catch (error) {
     console.log(error)
   }
@@ -14,7 +14,7 @@ export const getGuides = async () => {
   try {
     const res = await API.get('/guides')
 
-    console.log(res)
+    return res
   } catch (error) {
     console.log(error)
   }
