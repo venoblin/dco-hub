@@ -3,7 +3,9 @@
   <head>
     <title>DCO Hub - Guides</title>
 
-    <th:block th:fragment="styles"></th:block>
+    <th:block th:fragment="styles">
+      <link rel="stylesheet" th:href="@{/styles/guides.css}" />
+    </th:block>
   </head>
   <body>
     <main>
@@ -12,7 +14,7 @@
       </header>
       <a class="btn" href="/guides/new">Create Guide</a>
 
-      <div id="guides-container"></div>
+      <div id="guides-container" class="panel guides"></div>
     </main>  
     
     <th:block th:fragment="scripts">

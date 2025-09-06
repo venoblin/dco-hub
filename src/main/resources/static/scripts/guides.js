@@ -6,7 +6,7 @@ const allGuides = await getGuides()
 
 const createGuide = (guide) => {
   const guideElem = document.createElement('div')
-  guideElem.classList.add('guide')
+  guideElem.classList.add('guide-card')
 
   const authorElem = document.createElement('p')
   authorElem.classList.add('author')

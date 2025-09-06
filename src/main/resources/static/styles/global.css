@@ -135,3 +135,22 @@ a:hover {
   margin-left: 1px;
   border-color: var(--accent-color);
 }
+
+.panel {
+  background: var(--overlay-bg-color);
+  padding: var(--default-spacing);
+  border-radius: var(--default-border-radius);
+}
+
+.guide-card {
+  padding-bottom: var(--default-spacing);
+  margin-top: var(--default-spacing);
+}
+
+.guide-card:first-of-type {
+  margin-top: 0;
+}
+
+.guide-card:last-of-type {
+  padding-bottom: 0;
+}
