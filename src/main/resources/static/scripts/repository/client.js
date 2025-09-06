@@ -26,7 +26,7 @@ class Client {
       })
 
       if (res.ok) {
-        return res
+        return res.json()
       }
     } catch (error) {
       throw new Error(error)
@@ -38,7 +38,7 @@ class Client {
       const res = await fetch(`${this.#constructUrl(endpoint)}`)
 
       if (res.ok) {
-        return res
+        return res.json()
       }
     } catch (error) {
       throw new Error(error)
