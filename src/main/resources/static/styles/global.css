@@ -145,6 +145,7 @@ a:hover {
 .guide-card {
   padding-bottom: var(--default-spacing);
   margin-top: var(--default-spacing);
+  border-bottom: var(--border-width) solid var(--bg-color);
 }
 
 .guide-card:first-of-type {
@@ -153,4 +154,5 @@ a:hover {
 
 .guide-card:last-of-type {
   padding-bottom: 0;
+  border-bottom: none;
 }
