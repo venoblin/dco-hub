@@ -1,5 +1,7 @@
 const removeLoadElem = () => {
-  document.getElementById('loader-wrap').remove()
+  const loadElem = document.getElementById('loader-wrap')
+
+  if (loadElem) loadElem.remove()
 }
 
 const createLoadElem = (parentElem) => {

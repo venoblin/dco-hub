@@ -1,8 +1,9 @@
 import { getGuides } from './service/guidesService.js'
+import { load } from './utils/index.js'
 
 const guidesContainer = document.getElementById('guides-container')
 
-const allGuides = await getGuides()
+const allGuides = await load(getGuides, guidesContainer)
 
 const createGuide = (guide) => {
   const guideElem = document.createElement('div')
