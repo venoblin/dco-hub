@@ -27,7 +27,9 @@ class Form extends FormData {
   }
 
   clear() {
-    console.log(this.#children)
+    for (let child of this.#children) {
+      child.value = ''
+    }
   }
 }
 
