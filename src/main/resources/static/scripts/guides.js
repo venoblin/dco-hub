@@ -29,6 +29,7 @@ if (allGuides && allGuides.length > 0) {
   }
 } else {
   const msg = document.createElement('p')
+  msg.classList.add('msg')
   msg.innerText = 'No guides found!'
 
   guidesContainer.appendChild(msg)

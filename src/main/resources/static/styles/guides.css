@@ -1,3 +1,7 @@
 .guides {
   margin-top: var(--default-spacing);
 }
+
+.guides .msg {
+  text-align: center;
+}
