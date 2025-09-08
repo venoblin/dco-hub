@@ -23,7 +23,7 @@ public class GuideController {
 
   @GetMapping
   public ResponseEntity<List<Guide>> getAllGuides() {
-    List<Guide> allGuides = guideService.getAllGuides();
+    List<Guide> allGuides = guideService.findAllGuides();
     
     return ResponseEntity.status(HttpStatus.OK).body(allGuides);
   }

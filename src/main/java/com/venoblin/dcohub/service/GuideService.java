@@ -13,7 +13,7 @@ public class GuideService {
     this.guideRepository = guideRepository;
   }
 
-  public List<Guide> getAllGuides() {
+  public List<Guide> findAllGuides() {
     return guideRepository.findAll();
   }
 
