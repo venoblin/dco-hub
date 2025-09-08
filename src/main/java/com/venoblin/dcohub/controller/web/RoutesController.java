@@ -21,4 +21,9 @@ public class RoutesController {
   public String newGuide(Model model) {
     return "newGuide";
   }
+
+  @GetMapping("/guides/{id}")
+  public String singleGuide(Model model) {
+    return "singleGuide";
+  }
 }
