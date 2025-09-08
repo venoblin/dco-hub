@@ -29,7 +29,10 @@ const createLoadElem = (parentElem) => {
 }
 
 export const load = (promise, parentElem) => {
-  createLoadElem(parentElem)
+  let parent = parentElem
+  if (!parent) parent = document.body
+
+  createLoadElem(parent)
 
   return promise()
     .then((res) => {

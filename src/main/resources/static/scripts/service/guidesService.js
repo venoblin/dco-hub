@@ -19,3 +19,13 @@ export const getGuides = async () => {
     console.log(error)
   }
 }
+
+export const getSingleGuide = async (id) => {
+  try {
+    const res = await API.get(`/guides/${id}`)
+
+    return res
+  } catch (error) {
+    console.log(error)
+  }
+}
