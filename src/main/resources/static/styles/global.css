@@ -146,10 +146,18 @@ a:hover {
   margin-top: var(--default-spacing);
   border-bottom: var(--border-width) solid var(--bg-color);
   display: flex;
+  height: 125px;
+  overflow: hidden;
 }
 
 .guide-card div:first-of-type {
   margin-right: var(--default-spacing);
+  border-right: var(--border-width) solid var(--bg-color);
+  width: 200px;
+}
+
+.guide-card div:last-of-type {
+  width: 100%;
 }
 
 .guide-card:first-of-type {
