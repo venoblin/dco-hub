@@ -8,18 +8,16 @@ const allGuides = await load(getGuides, guidesContainer)
 const createGuide = (guide) => {
   const guideElem = document.createElement('div')
   guideElem.classList.add('guide-card')
+  guideElem.innerHTML = `
+    <div>
+      <a class="title" href="/guides/${guide.title}">${guide.title} →</a>
+      <p class="author">By ${guide.author}</p>
+    </div>
 
-  const titleElem = document.createElement('a')
-  titleElem.classList.add('title')
-  titleElem.innerText = `${guide.title} →`
-  titleElem.href = `/guides/${guide.title}`
-
-  const authorElem = document.createElement('p')
-  authorElem.classList.add('author')
-  authorElem.innerText = `By ${guide.author}`
-
-  guideElem.appendChild(titleElem)
-  guideElem.appendChild(authorElem)
+    <div>
+      <p class="content">${guide.content}</p>
+    </div>
+  `
 
   guidesContainer.appendChild(guideElem)
 }
