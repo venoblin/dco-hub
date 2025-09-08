@@ -157,6 +157,10 @@ a:hover {
   border-bottom: none;
 }
 
+.guide-card .title {
+  font-size: 1.35em;
+}
+
 .guide-card .author {
   color: var(--muted-text-color);
 }

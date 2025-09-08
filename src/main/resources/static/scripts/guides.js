@@ -9,9 +9,10 @@ const createGuide = (guide) => {
   const guideElem = document.createElement('div')
   guideElem.classList.add('guide-card')
 
-  const titleElem = document.createElement('h2')
+  const titleElem = document.createElement('a')
   titleElem.classList.add('title')
-  titleElem.innerText = guide.title
+  titleElem.innerText = `${guide.title} →`
+  titleElem.href = `/guides/${guide.title}`
 
   const authorElem = document.createElement('p')
   authorElem.classList.add('author')

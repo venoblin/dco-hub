@@ -27,6 +27,8 @@ class Form extends FormData {
   }
 
   clear() {
+    this.#formData = {}
+
     for (let child of this.#children) {
       child.value = ''
     }
