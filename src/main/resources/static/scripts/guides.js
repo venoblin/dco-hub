@@ -5,6 +5,10 @@ const guidesContainer = document.getElementById('guides-container')
 
 const allGuides = await load(getGuides, guidesContainer)
 
+const cleanTime = (time) => {
+  return `${time.slice(5, 7)}/${time.slice(8, 10)}/${time.slice(0, 4)}`
+}
+
 const createGuide = (guide) => {
   const guideElem = document.createElement('div')
   guideElem.classList.add('guide-card')
@@ -12,10 +16,10 @@ const createGuide = (guide) => {
     <div>
       <a class="title" href="/guides/${guide.id}">${guide.title} →</a>
       <p class="author">By ${guide.author}</p>
-      <p class="created-at">Created ${guide.createdAt}</p>
+      <p class="created-at">Created ${cleanTime(guide.createdAt)}</p>
       ${
         guide.updatedAt !== guide.createdAt
-          ? `<p class="updated-at">Updated ${guide.updatedAt}</p>`
+          ? `<p class="updated-at">Updated ${cleanTime(guide.updatedAt)}</p>`
           : ''
       }
     </div>

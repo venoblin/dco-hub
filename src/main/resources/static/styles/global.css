@@ -153,7 +153,7 @@ a:hover {
 .guide-card div:first-of-type {
   margin-right: var(--default-spacing);
   border-right: var(--border-width) solid var(--bg-color);
-  width: 200px;
+  width: 250px;
 }
 
 .guide-card div:last-of-type {
