@@ -10,8 +10,14 @@ const createGuide = (guide) => {
   guideElem.classList.add('guide-card')
   guideElem.innerHTML = `
     <div>
-      <a class="title" href="/guides/${guide.title}">${guide.title} →</a>
+      <a class="title" href="/guides/${guide.id}">${guide.title} →</a>
       <p class="author">By ${guide.author}</p>
+      <p class="created-at">Created ${guide.createdAt}</p>
+      ${
+        guide.updatedAt !== guide.createdAt
+          ? `<p class="updated-at">Updated ${guide.updatedAt}</p>`
+          : ''
+      }
     </div>
 
     <div>

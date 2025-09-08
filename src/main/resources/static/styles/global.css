@@ -173,7 +173,9 @@ a:hover {
   font-size: 1.35em;
 }
 
-.guide-card .author {
+.guide-card .author,
+.guide-card .created-at,
+.guide-card .updated-at {
   color: var(--muted-text-color);
 }
 
