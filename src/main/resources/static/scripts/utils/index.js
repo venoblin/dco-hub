@@ -46,3 +46,7 @@ export const load = (promise, parentElem) => {
       throw new Error(error)
     })
 }
+
+export const cleanTime = (time) => {
+  return `${time.slice(5, 7)}/${time.slice(8, 10)}/${time.slice(0, 4)}`
+}

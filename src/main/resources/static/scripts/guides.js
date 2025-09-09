@@ -1,13 +1,9 @@
 import { getGuides } from './service/guidesService.js'
-import { load } from './utils/index.js'
+import { load, cleanTime } from './utils/index.js'
 
 const guidesContainer = document.getElementById('guides-container')
 
 const allGuides = await load(getGuides, guidesContainer)
-
-const cleanTime = (time) => {
-  return `${time.slice(5, 7)}/${time.slice(8, 10)}/${time.slice(0, 4)}`
-}
 
 const createGuide = (guide) => {
   const guideElem = document.createElement('div')
@@ -15,11 +11,13 @@ const createGuide = (guide) => {
   guideElem.innerHTML = `
     <div>
       <a class="title" href="/guides/${guide.id}">${guide.title} →</a>
-      <p class="author">By ${guide.author}</p>
-      <p class="created-at">Created ${cleanTime(guide.createdAt)}</p>
+      <p class="author muted-text">By ${guide.author}</p>
+      <p class="created-at muted-text">Created ${cleanTime(guide.createdAt)}</p>
       ${
         guide.updatedAt !== guide.createdAt
-          ? `<p class="updated-at">Updated ${cleanTime(guide.updatedAt)}</p>`
+          ? `<p class="updated-at muted-text">Updated ${cleanTime(
+              guide.updatedAt
+            )}</p>`
           : ''
       }
     </div>
