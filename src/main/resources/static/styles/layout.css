@@ -36,9 +36,22 @@ main header {
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   margin-bottom: var(--default-spacing);
+}
+
+main header div {
+  display: flex;
+}
+
+main header div p {
+  margin-right: var(--default-spacing);
+}
+
+main header div p:last-of-type {
+  margin-right: 0;
 }
 
 main header h1 {

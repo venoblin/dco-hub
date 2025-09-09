@@ -3,8 +3,8 @@ import { getSingleGuide } from './service/guidesService.js'
 
 const guide = await load(() => getSingleGuide(GUIDE_ID))
 
-const header = document.querySelector('main header')
-header.innerHTML = `
+const headerElem = document.querySelector('main header')
+headerElem.innerHTML = `
   <h1>${guide.title}</h1>
 
   <div>
@@ -17,3 +17,5 @@ header.innerHTML = `
     }
   </div>
 `
+const contentElem = document.getElementById('content')
+contentElem.innerText = guide.content
