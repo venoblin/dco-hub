@@ -62,6 +62,9 @@ footer {
   display: flex;
   align-content: center;
   justify-content: center;
+  padding: var(--default-spacing);
+  margin-top: 2rem;
+  color: var(--muted-text-color);
 }
 
 .logo {
