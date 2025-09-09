@@ -63,7 +63,5 @@ export const getBasePathname = (pathname) => {
 
   const cleanedPath = `/${path.slice(0, endIdx)}`
 
-  console.log(cleanedPath)
-
   return cleanedPath
 }
