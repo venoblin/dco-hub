@@ -26,15 +26,11 @@
           <input required type="text" name="title" id="title" placeholder="Title" />
         </div>
 
-        <div>
-          <label for="content">Content</label>  
-          <textarea required name="content" id="content" rows="5" cols="30" placeholder="Content"></textarea>
-        </div>
+        <div id="editor-container"></div>
 
         <button type="submit">Create</button>
       </form>
 
-      <div id="editor-container"></div>
     </main>  
     
     <th:block th:fragment="scripts">
