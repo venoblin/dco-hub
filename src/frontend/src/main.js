@@ -22,9 +22,9 @@ const toolbarOptions = [
   ['clean'] // remove formatting button
 ]
 
-export const quill = new Quill('#editor-container', {
+export const quill = new Quill('#editor', {
   modules: {
-    toolbar: toolbarOptions
+    toolbar: '#toolbar'
   },
   theme: 'snow',
   placeholder: 'Content'
