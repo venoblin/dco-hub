@@ -61,3 +61,7 @@ dco.db
 *.sqlite
 *.sqlite-journal
 *-journal
+
+node_modules/
+dist/
+.parcel-cache/
