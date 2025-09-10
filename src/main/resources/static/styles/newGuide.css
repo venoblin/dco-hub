@@ -14,3 +14,8 @@
 .new-guide-form div:last-of-type {
   margin-bottom: var(--default-spacing);
 }
+
+#editor-container {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
