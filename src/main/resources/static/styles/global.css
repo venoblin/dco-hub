@@ -184,3 +184,13 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.ql-toolbar span {
+  display: flex;
+}
+
+.ql-toolbar polygon,
+.ql-toolbar svg {
+  width: 25px;
+  height: 25px;
+}
