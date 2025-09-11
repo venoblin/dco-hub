@@ -24,6 +24,5 @@ export const quill = new Quill('#editor', {
   modules: {
     toolbar: toolbarOptions
   },
-  theme: 'snow',
-  placeholder: 'Content'
+  theme: 'snow'
 })

@@ -1,6 +1,6 @@
 :root {
   --bg-color: #171c1b;
-  --text-color: #F6F7EB;
+  --text-color: #f6f7eb;
   --muted-text-color: #989898;
   --overlay-bg-color: #262424;
   --accent-color: #2175d9;
@@ -12,4 +12,5 @@
   --default-spacing: 1rem;
   --default-border-radius: 1rem;
   --default-border: var(--border-width) solid var(--overlay-bg-color);
+  --body-font-family: 'Poppins-Regular', Helvetica, Arial, sans-serif;
 }

@@ -14,3 +14,24 @@
 .new-guide-form div:last-of-type {
   margin-bottom: var(--default-spacing);
 }
+
+.editor-container {
+  background: var(--text-color);
+  color: var(--bg-color);
+  width: 100%;
+  border-radius: var(--default-border-radius);
+  padding: var(--default-spacing);
+}
+
+.editor-container .ql-toolbar {
+  flex-direction: row;
+  font-family: var(--body-font-family);
+  border: none;
+  border-bottom: var(--default-border);
+}
+
+.editor-container .ql-container {
+  font-family: var(--body-font-family);
+  border: none;
+  min-height: 500px;
+}
