@@ -9,8 +9,10 @@ guideForm.addEventListener('submit', async (event) => {
   const form = new Form(event.target)
   const data = form.getData()
 
-  const newGuide = await postGuide(data)
+  // const newGuide = await postGuide(data)
+
+  console.log()
 
   form.clear()
-  window.location.href = `/guides/${newGuide.id}`
+  // window.location.href = `/guides/${newGuide.id}`
 })
