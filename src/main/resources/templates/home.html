@@ -3,18 +3,15 @@
   xmlns:th="http://www.thymeleaf.org"
   th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}"
 >
-  <head>
-    <title>DCO Hub - Home</title>
+  <title>DCO Hub - Home</title>
 
-    <th:block th:fragment="styles"></th:block>
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>Home</h1>
-      </header>
-    </main>
+  <th:block th:fragment="styles"></th:block>
 
-    <th:block th:fragment="scripts"></th:block>
-  </body>
+  <main>
+    <header>
+      <h1>Home</h1>
+    </header>
+  </main>
+
+  <th:block th:fragment="scripts"></th:block>
 </html>
