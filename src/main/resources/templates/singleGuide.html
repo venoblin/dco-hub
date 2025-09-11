@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}">
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}"
+>
   <head>
     <title>DCO Hub - Guides</title>
 
@@ -14,8 +17,8 @@
       </header>
 
       <div id="content"></div>
-    </main>  
-    
+    </main>
+
     <th:block th:fragment="scripts">
       <script th:inline="javascript">
         const GUIDE_ID = /*[[${guideId}]]*/ null

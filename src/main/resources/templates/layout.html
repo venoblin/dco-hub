@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, styles, content, scripts)">
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  th:fragment="layout(title, styles, content, scripts)"
+>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" th:href="@{/favicon.png}" sizes="any" />
     <link rel="icon" th:href="@{/favicon.svg}" type="image/svg+xml" />
-    
+
     <title th:replace="${title}"></title>
-    
+
     <link rel="stylesheet" th:href="@{/dist/main.css}" />
     <link rel="stylesheet" th:href="@{/styles/layout.css}" />
     <link rel="stylesheet" th:href="@{/styles/global.css}" />
@@ -18,33 +22,60 @@
   <body>
     <nav class="layout-nav">
       <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-          <path fill="#2175d9" d="M28.967 12H9.442a2 2 0 0 0-1.898 1.368L4 24V10h24a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h22l4.805-11.212A2 2 0 0 0 28.967 12" />
-          <path fill="#88beff" d="M14 15v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H15a1 1 0 0 0-1 1m6 3h-4v-2h4Zm4 0h-2v-2h2Zm-10 5v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H15a1 1 0 0 0-1 1m6 3h-4v-2h4Zm4 0h-2v-2h2Z" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+        >
+          <path
+            fill="#2175d9"
+            d="M28.967 12H9.442a2 2 0 0 0-1.898 1.368L4 24V10h24a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h22l4.805-11.212A2 2 0 0 0 28.967 12"
+          />
+          <path
+            fill="#88beff"
+            d="M14 15v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H15a1 1 0 0 0-1 1m6 3h-4v-2h4Zm4 0h-2v-2h2Zm-10 5v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H15a1 1 0 0 0-1 1m6 3h-4v-2h4Zm4 0h-2v-2h2Z"
+          />
         </svg>
 
         <p>DCO Hub</p>
       </div>
-      
+
       <div class="links-wrap">
         <a id="home-link" class="nav-link" href="/">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <path fill="#989898" d="M22 9L12 1L2 9v2h2v10h5v-4a3 3 0 1 1 6 0v4h5V11h2z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#989898"
+              d="M22 9L12 1L2 9v2h2v10h5v-4a3 3 0 1 1 6 0v4h5V11h2z"
+            />
           </svg>
-          
+
           <p>Home</p>
         </a>
 
         <a id="guides-link" class="nav-link" href="/guides">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <path fill="#989898" d="M4 3h2v18H4zm14 0H7v18h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-2 6h-6V8h6zm0-2h-6V6h6z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#989898"
+              d="M4 3h2v18H4zm14 0H7v18h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-2 6h-6V8h6zm0-2h-6V6h6z"
+            />
           </svg>
-          
+
           <p>Guides</p>
         </a>
       </div>
     </nav>
-    
+
     <div class="main-wrap">
       <main th:replace="${content}"></main>
 
@@ -52,9 +83,8 @@
         <p>2025 DCO Hub</p>
       </footer>
     </div>
-    
+
     <th:block th:replace="${scripts}"></th:block>
-    <script type="text/javascript" th:src="@{/dist/main.js}"></script>
     <script type="module" th:src="@{/scripts/global.js}"></script>
   </body>
 </html>
