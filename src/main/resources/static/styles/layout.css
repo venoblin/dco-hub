@@ -16,7 +16,7 @@
   padding-left: calc(var(--nav-width) + var(--default-spacing));
 }
 
-main, 
+main,
 footer {
   margin-left: auto;
   margin-right: auto;
@@ -33,12 +33,9 @@ main header {
   height: var(--nav-height);
   background: var(--bg-color);
   border-bottom: var(--default-border);
-  padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   margin-bottom: var(--default-spacing);
 }
 
