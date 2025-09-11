@@ -74,9 +74,11 @@ Describe prerequisites and how to complete them, this example we're installing n
     ```
 
 ### Installation
-1. **Clone the repository** 
+1. **Build Frontend Dependencies** 
     ```sh
-    git clone --recurse-submodules https://github.com/venoblin/scripts
+    cd src/frontend
+    npm i
+    npm run build
     ```
 
 2. **Create settings file (for [ezdownloadsorter](https://github.com/venoblin/download-file-sorter))**

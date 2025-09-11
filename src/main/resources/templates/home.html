@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}">
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{layout :: layout(~{::title}, ~{::styles}, ~{::main}, ~{::scripts})}"
+>
   <head>
     <title>DCO Hub - Home</title>
-    
+
     <th:block th:fragment="styles"></th:block>
   </head>
   <body>
@@ -10,7 +13,7 @@
       <header>
         <h1>Home</h1>
       </header>
-    </main>  
+    </main>
 
     <th:block th:fragment="scripts"></th:block>
   </body>
