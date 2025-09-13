@@ -1,4 +1,6 @@
 <script lang="ts">
+	import NavBar from '$lib/components/NavBar.svelte';
+	
 	import favicon from '$lib/assets/favicon.svg'
 
 	let { children } = $props();
@@ -10,8 +12,15 @@
 	<link rel="stylesheet" href="../../static/global.css" />
 </svelte:head>
 
+<NavBar />
 
-{@render children?.()}
+<main>
+	<div class="main-wrap">
+		{@render children?.()}
+	</div>
+</main>
+
+<footer>2025 DCO Hub</footer>
 
 <style>
 	:global {
@@ -60,34 +69,6 @@
 
 		path {
 			transition: fill var(--default-transition), opacity var(--default-transition);
-		}
-
-		.nav-link {
-			display: block;
-			color: var(--muted-text-color);
-			text-decoration: none;
-			transition: color var(--default-transition), opacity var(--default-transition);
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.nav-link:hover {
-			color: var(--accent-color);
-		}
-
-		.nav-link:hover path {
-			fill: var(--accent-color);
-		}
-
-		.nav-link.active {
-			opacity: 0.8;
-			color: var(--accent-color);
-		}
-
-		.nav-link.active path {
-			fill: var(--accent-color);
 		}
 
 		h1,
@@ -218,7 +199,57 @@
 			align-items: center;
 		}
 	}
-	
 
-	
+	.main-wrap {
+		padding: var(--default-spacing);
+		padding-left: calc(var(--nav-width) + var(--default-spacing));
+	}
+
+	main,
+	footer {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1200px;
+	}
+
+	main {
+		position: relative;
+		min-height: 90vh;
+	}
+
+	main header {
+		width: 100%;
+		height: var(--nav-height);
+		background: var(--bg-color);
+		border-bottom: var(--default-border);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: var(--default-spacing);
+	}
+
+	main header div {
+		display: flex;
+	}
+
+	main header div p {
+		margin-right: var(--default-spacing);
+	}
+
+	main header div p:last-of-type {
+		margin-right: 0;
+	}
+
+	main header h1 {
+		margin-bottom: 0;
+	}
+
+	footer {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		padding: var(--default-spacing);
+		margin-top: 2rem;
+		color: var(--muted-text-color);
+	}
 </style>
