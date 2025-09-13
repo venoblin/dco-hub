@@ -1,12 +1,8 @@
 <script>
   import {page} from '$app/state'
-  import {getBasePathname} from '../utils'
+  import {getBasePathname} from '$lib/utils'
 
   const basePath = $derived(getBasePathname(page.route.id))
-
-  $effect(() => {
-    console.log(basePath)
-  })
 </script>
 
 <nav>
