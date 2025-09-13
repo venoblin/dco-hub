@@ -1,15 +1,14 @@
 <script lang="ts">
 	import NavBar from '$lib/components/NavBar.svelte';
-	
 	import favicon from '$lib/assets/favicon.svg'
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
+	<title>DCO Hub</title>
+	
 	<link rel="icon" href={favicon} />
-
-	<link rel="stylesheet" href="../../static/global.css" />
 </svelte:head>
 
 <NavBar />
@@ -148,6 +147,32 @@
 			opacity: 0.8;
 			border-color: var(--accent-color);
 		}
+		main header {
+			width: 100%;
+			height: var(--nav-height);
+			background: var(--bg-color);
+			border-bottom: var(--default-border);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: var(--default-spacing);
+		}
+
+		main header div {
+			display: flex;
+		}
+
+		main header div p {
+			margin-right: var(--default-spacing);
+		}
+
+		main header div p:last-of-type {
+			margin-right: 0;
+		}
+
+		main header h1 {
+			margin-bottom: 0;
+		}
 
 		.panel {
 			background: var(--overlay-bg-color);
@@ -215,33 +240,6 @@
 	main {
 		position: relative;
 		min-height: 90vh;
-	}
-
-	main header {
-		width: 100%;
-		height: var(--nav-height);
-		background: var(--bg-color);
-		border-bottom: var(--default-border);
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-bottom: var(--default-spacing);
-	}
-
-	main header div {
-		display: flex;
-	}
-
-	main header div p {
-		margin-right: var(--default-spacing);
-	}
-
-	main header div p:last-of-type {
-		margin-right: 0;
-	}
-
-	main header h1 {
-		margin-bottom: 0;
 	}
 
 	footer {
