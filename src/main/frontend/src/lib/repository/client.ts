@@ -15,7 +15,7 @@ class Client {
     return `${this.#baseUrl}/${cleanedEndpoint}`
   }
 
-  async post(endpoint: string, payload: Guide) {
+  async post(endpoint: string, payload: any) {
     try {
       const res = await fetch(`${this.#constructUrl(endpoint)}`, {
         method: 'POST',
