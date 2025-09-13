@@ -1,32 +1,21 @@
 package com.venoblin.dcohub.controller.web;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class RoutesController {
 
-  @GetMapping("/")
-  public String home(Model model) {
-    return "home";
-  }
+  // Handles the root URL
+    @GetMapping(value = "/")
+    public String forwardRoot() {
+        return "forward:/index.html";
+    }
 
-  @GetMapping("/guides")
-  public String guides(Model model) {
-    return "guides";
-  }
-
-  @GetMapping("/guides/new")
-  public String newGuide(Model model) {
-    return "newGuide";
-  }
-
-  @GetMapping("/guides/{id}")
-  public String singleGuide(@PathVariable("id") Long id, Model model) {
-    model.addAttribute("guideId", id);
-    
-    return "singleGuide";
-  }
+    // This regex handles client-side routes but ignores static files
+    // It matches any path that DOES NOT contain a period.
+    @GetMapping(value = "/{path:^(?!.*\\.).*$}/**")
+    public String forwardClientRoutes() {
+        return "forward:/index.html";
+    }
 }
