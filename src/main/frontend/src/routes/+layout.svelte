@@ -1,11 +1,224 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.svg'
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+
+	<link rel="stylesheet" href="../../static/global.css" />
 </svelte:head>
 
+
 {@render children?.()}
+
+<style>
+	:global {
+		:root {
+			--bg-color: #171c1b;
+			--text-color: #f6f7eb;
+			--muted-text-color: #989898;
+			--overlay-bg-color: #262424;
+			--accent-color: #2175d9;
+			--danger-color: #c13642;
+			--border-width: 1px;
+			--nav-width: 200px;
+			--nav-height: 60px;
+			--default-transition: 0.1s ease-in-out;
+			--default-spacing: 1rem;
+			--default-border-radius: 1rem;
+			--default-border: var(--border-width) solid var(--overlay-bg-color);
+			--body-font-family: 'Poppins-Regular', Helvetica, Arial, sans-serif;
+		}
+		
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		@font-face {
+			font-family: 'Poppins-Regular';
+			src: url('../fonts/Poppins-Regular.ttf');
+		}
+		@font-face {
+			font-family: 'Mozilla-Regular';
+			src: url('../fonts/MozillaHeadline-Regular.ttf');
+		}
+
+		body {
+			font-family: var(--body-font-family);
+			font-synthesis: none;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			background: var(--bg-color);
+			color: var(--text-color);
+			max-width: 2000px;
+		}
+
+		path {
+			transition: fill var(--default-transition), opacity var(--default-transition);
+		}
+
+		.nav-link {
+			display: block;
+			color: var(--muted-text-color);
+			text-decoration: none;
+			transition: color var(--default-transition), opacity var(--default-transition);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.nav-link:hover {
+			color: var(--accent-color);
+		}
+
+		.nav-link:hover path {
+			fill: var(--accent-color);
+		}
+
+		.nav-link.active {
+			opacity: 0.8;
+			color: var(--accent-color);
+		}
+
+		.nav-link.active path {
+			fill: var(--accent-color);
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-family: 'Mozilla-Regular', Helvetica, Arial, sans-serif;
+		}
+
+		button,
+		a,
+		input,
+		textarea,
+		p {
+			font-size: 1em;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin-bottom: 0.5rem;
+		}
+
+		h2 {
+			font-size: 1.75em;
+			margin-bottom: 0.5rem;
+		}
+
+		label {
+			position: absolute;
+			left: -999999px;
+		}
+
+		.btn,
+		button {
+			cursor: pointer;
+			display: block;
+			border: none;
+			text-decoration: none;
+			background: var(--accent-color);
+			color: var(--bg-color);
+			width: fit-content;
+			padding: 0.25rem 0.5rem;
+			border-radius: 10px;
+			transition: opacity var(--default-transition);
+		}
+
+		.btn:hover,
+		button:hover {
+			opacity: 0.8;
+			margin-left: 0;
+		}
+
+		input,
+		textarea {
+			padding: 0.75rem 1rem;
+			border-radius: var(--default-border-radius);
+			outline: none;
+			border: var(--border-width) solid var(--overlay-bg-color);
+			background: var(--text-color);
+			color: var(--bg-color);
+			transition: border var(--default-transition), color var(--default-transition);
+		}
+
+		input:focus,
+		textarea:focus {
+			border-color: var(--accent-color);
+		}
+
+		a {
+			text-decoration: none;
+			color: var(--accent-color);
+			border-bottom: var(--border-width) solid transparent;
+			transition: opacity var(--default-transition),
+				border-color var(--default-transition);
+		}
+
+		a:hover {
+			opacity: 0.8;
+			border-color: var(--accent-color);
+		}
+
+		.panel {
+			background: var(--overlay-bg-color);
+			padding: var(--default-spacing);
+			border-radius: var(--default-border-radius);
+		}
+
+		.guide-card {
+			padding-bottom: var(--default-spacing);
+			margin-top: var(--default-spacing);
+			border-bottom: var(--border-width) solid var(--bg-color);
+			display: flex;
+			height: 125px;
+			overflow: hidden;
+		}
+
+		.guide-card div:first-of-type {
+			margin-right: var(--default-spacing);
+			border-right: var(--border-width) solid var(--bg-color);
+			width: 250px;
+		}
+
+		.guide-card div:last-of-type {
+			width: 100%;
+		}
+
+		.guide-card:first-of-type {
+			margin-top: 0;
+		}
+
+		.guide-card:last-of-type {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+		.guide-card .title {
+			font-size: 1.35em;
+		}
+
+		.muted-text {
+			color: var(--muted-text-color);
+		}
+
+		.loader-wrap {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	
+
+	
+</style>
