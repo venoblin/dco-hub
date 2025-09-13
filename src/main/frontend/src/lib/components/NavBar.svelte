@@ -1,5 +1,9 @@
 <script>
   import { page } from '$app/state'
+  import { getBasePathname } from '../../utils';
+
+  const basePath = $state(getBasePathname(page.route.id))
+  console.log(basePath)
 </script>
 
 <nav>
@@ -23,7 +27,7 @@
       <p>DCO Hub</p>
     </div>
     <div class="links-wrap">
-      <a id="home-link" class="nav-link" href="/">
+      <a class="nav-link" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
