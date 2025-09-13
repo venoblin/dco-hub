@@ -14,7 +14,6 @@ const config = {
     adapter: adapter({
       pages: '../resources/static',
       assets: '../resources/static',
-      pages: '../resources/static',
       fallback: 'index.html'
     })
   }

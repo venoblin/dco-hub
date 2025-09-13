@@ -64,4 +64,5 @@ dco.db
 
 node_modules/
 dist/
+src/main/resources/static
 .parcel-cache/
