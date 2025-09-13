@@ -1,9 +1,12 @@
 <script>
-  import { page } from '$app/state'
-  import { getBasePathname } from '../../utils';
+  import {page} from '$app/state'
+  import {getBasePathname} from '../utils'
 
-  const basePath = $state(getBasePathname(page.route.id))
-  console.log(basePath)
+  const basePath = $derived(getBasePathname(page.route.id))
+
+  $effect(() => {
+    console.log(basePath)
+  })
 </script>
 
 <nav>
@@ -27,7 +30,7 @@
       <p>DCO Hub</p>
     </div>
     <div class="links-wrap">
-      <a class="nav-link" href="/">
+      <a class={`nav-link${basePath === '/' ? ' active' : ''}`} href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -41,7 +44,7 @@
         </svg>
         <p>Home</p>
       </a>
-      <a id="guides-link" class="nav-link" href="/guides">
+      <a class={`nav-link${basePath === '/guides' ? ' active' : ''}`} href="/guides">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
