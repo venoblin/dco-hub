@@ -1,11 +1,11 @@
 class Client {
   #baseUrl
 
-  constructor(baseUrl) {
+  constructor(baseUrl: string) {
     this.#baseUrl = baseUrl
   }
 
-  #constructUrl = (endpoint) => {
+  #constructUrl = (endpoint: string) => {
     let cleanedEndpoint = endpoint
 
     if (cleanedEndpoint[0] === '/') {
@@ -15,7 +15,7 @@ class Client {
     return `${this.#baseUrl}/${cleanedEndpoint}`
   }
 
-  async post(endpoint, payload) {
+  async post(endpoint: string, payload: Guide) {
     try {
       const res = await fetch(`${this.#constructUrl(endpoint)}`, {
         method: 'POST',
@@ -28,19 +28,19 @@ class Client {
       if (res.ok) {
         return res.json()
       }
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error)
     }
   }
 
-  async get(endpoint) {
+  async get(endpoint: string) {
     try {
       const res = await fetch(`${this.#constructUrl(endpoint)}`)
 
       if (res.ok) {
         return res.json()
       }
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error)
     }
   }

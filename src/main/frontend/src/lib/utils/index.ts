@@ -47,9 +47,9 @@
 //     })
 // }
 
-// export const cleanTime = (time) => {
-//   return `${time.slice(5, 7)}/${time.slice(8, 10)}/${time.slice(0, 4)}`
-// }
+export const cleanTime = (time: string) => {
+  return `${time.slice(5, 7)}/${time.slice(8, 10)}/${time.slice(0, 4)}`
+}
 
 export const getBasePathname = (pathname: string | null) => {
   if (!pathname) {

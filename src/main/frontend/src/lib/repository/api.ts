@@ -1,3 +1,3 @@
-import Client from './client.js'
+import Client from './client'
 
 export const API = new Client('/api')

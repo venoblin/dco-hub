@@ -1,8 +1,8 @@
 <script lang="ts">
-	import NavBar from '$lib/components/NavBar.svelte';
+	import NavBar from '$lib/components/NavBar.svelte'
 	import favicon from '$lib/assets/favicon.svg'
 
-	let { children } = $props();
+	let { children } = $props()
 </script>
 
 <svelte:head>
@@ -172,12 +172,6 @@
 
 		main header h1 {
 			margin-bottom: 0;
-		}
-
-		.panel {
-			background: var(--overlay-bg-color);
-			padding: var(--default-spacing);
-			border-radius: var(--default-border-radius);
 		}
 
 		.guide-card {
