@@ -1,6 +1,6 @@
 import { API } from '../repository/api.js'
 
-export const postGuide = async (payload) => {
+export const postGuide = async (payload: GuidePayload) => {
   try {
     const res = await API.post('/guides', payload)
 
@@ -20,7 +20,7 @@ export const getGuides = async () => {
   }
 }
 
-export const getSingleGuide = async (id) => {
+export const getSingleGuide = async (id: number) => {
   try {
     const res = await API.get(`/guides/${id}`)
 
