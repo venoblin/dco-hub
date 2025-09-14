@@ -209,14 +209,6 @@
 		.muted-text {
 			color: var(--muted-text-color);
 		}
-
-		.loader-wrap {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 	}
 
 	.main-wrap {

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Panel from "$lib/components/ui/Panel.svelte"
+  import Panel from '$lib/components/ui/Panel.svelte'
+  import Loading from '$lib/components/Loading.svelte'
 </script>
 
 <header>
@@ -11,5 +12,5 @@
 </header>
 
 <Panel>
-  <p>hi</p>
+  <Loading />
 </Panel>
