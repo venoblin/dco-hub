@@ -1,5 +1,6 @@
 <script lang="ts">
   import Panel from '$lib/components/ui/Panel.svelte'
+  import GuideCard from '$lib/components/GuideCard.svelte'
 
   let { data } = $props()
 
@@ -15,7 +16,9 @@
 
 <Panel>
   {#if data.guides.length > 0}
-    <p>Guides</p>
+    {#each data.guides as g}
+      <GuideCard guide={g} />
+    {/each}
   {:else}
     <p>There are no guides!</p>
   {/if}
