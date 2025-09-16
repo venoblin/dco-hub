@@ -41,6 +41,7 @@ class Client {
         return res.json()
       }
     } catch (error: any) {
+      console.log(this.#constructUrl(endpoint))
       throw new Error(error)
     }
   }

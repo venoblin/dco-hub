@@ -1,14 +1,13 @@
 <script lang="ts">
-  import { API } from '$lib/repository/api'
+  import { getGuides } from '$lib/service/guidesService'
   import { load } from '$lib/utils'
 
-  const getGuides = async () => {
-    const guides = await API.get('/guides')
-    console.log(guides)
+  const loadGuides = async () => {
+    const guides = await getGuides()
   }
 
   $effect(() => {
-    getGuides()
+    loadGuides()
   })
 
 </script>
