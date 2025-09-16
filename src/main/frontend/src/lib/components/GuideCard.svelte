@@ -19,8 +19,6 @@
 </div>
 
 <style>
-  @import '../../../static/styles/vars.css';
-  
   .guide-card {
 		padding-bottom: var(--default-spacing);
 		margin-top: var(--default-spacing);

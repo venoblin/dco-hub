@@ -20,6 +20,6 @@
       <GuideCard guide={g} />
     {/each}
   {:else}
-    <p>There are no guides!</p>
+    <p class="msg">There are no guides!</p>
   {/if}
 </Panel>
