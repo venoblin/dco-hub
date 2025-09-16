@@ -1,17 +1,3 @@
-<script lang="ts">
-  import { getGuides } from '$lib/service/guidesService'
-  import { load } from '$lib/utils'
-
-  const loadGuides = async () => {
-    const guides = await getGuides()
-  }
-
-  $effect(() => {
-    loadGuides()
-  })
-
-</script>
-
 <div class="loader-wrap">
   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
     <g stroke="#F6F7EB" stroke-width="1">

@@ -1,13 +1,3 @@
-export const load = (promise: any) => {
-  return promise()
-    .then((res: any) => {
-      return res
-    })
-    .catch((error: any) => {
-      throw new Error(error)
-    })
-}
-
 export const cleanTime = (time: string) => {
   return `${time.slice(5, 7)}/${time.slice(8, 10)}/${time.slice(0, 4)}`
 }
