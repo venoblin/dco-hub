@@ -6,7 +6,7 @@ export const postGuide = async (payload: GuidePayload) => {
 
     return res
   } catch (error) {
-    console.log(error)
+    throw new Error()
   }
 }
 
@@ -16,7 +16,7 @@ export const getGuides = async () => {
 
     return res
   } catch (error) {
-    console.log(error)
+    throw new Error()
   }
 }
 
@@ -26,6 +26,6 @@ export const getSingleGuide = async (id: number) => {
 
     return res
   } catch (error) {
-    console.log(error)
+    throw new Error()
   }
 }
