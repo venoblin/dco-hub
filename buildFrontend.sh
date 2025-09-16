@@ -1,4 +1,4 @@
-cd src/frontend
+cd src/main/frontend
 
 npm i
 
