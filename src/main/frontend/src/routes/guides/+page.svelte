@@ -1,9 +1,8 @@
 <script lang="ts">
   import Panel from '$lib/components/ui/Panel.svelte'
-  import Loading from '$lib/components/Loading.svelte'
 
   let { data } = $props()
-  
+
 </script>
 
 <header>
@@ -15,5 +14,9 @@
 </header>
 
 <Panel>
-  <Loading />
+  {#if data.guides.length > 0}
+    <p>Guides</p>
+  {:else}
+    <p>There are no guides!</p>
+  {/if}
 </Panel>
