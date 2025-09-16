@@ -17,3 +17,34 @@
     <p class="content">{guide.content}</p>
   </div>
 </div>
+
+<style>
+  @import '../../../static/styles/vars.css';
+  
+  .guide-card {
+		padding-bottom: var(--default-spacing);
+		margin-top: var(--default-spacing);
+		border-bottom: var(--border-width) solid var(--bg-color);
+		display: flex;
+		height: 125px;
+		overflow: hidden;
+	}
+	.guide-card div:first-of-type {
+		margin-right: var(--default-spacing);
+		border-right: var(--border-width) solid var(--bg-color);
+		width: 250px;
+	}
+	.guide-card div:last-of-type {
+		width: 100%;
+	}
+	.guide-card:first-of-type {
+		margin-top: 0;
+	}
+	.guide-card:last-of-type {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+	.guide-card .title {
+		font-size: 1.35em;
+	}
+</style>
