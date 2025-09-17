@@ -68,6 +68,7 @@
     bottom: 0;
     padding: var(--default-spacing);
     border-right: var(--default-border);
+    z-index: 100;
   }
 
   .nav-link {
