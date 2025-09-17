@@ -36,6 +36,10 @@
 
 <header>
   <h1>New Guide</h1>
+
+  <div>
+    <button>Create</button>
+  </div>
 </header>
 
 <a href="/guides">← Back</a>
