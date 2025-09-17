@@ -100,7 +100,7 @@
     align-items: center;
     border-bottom: var(--default-border);
     padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: calc(var(--default-spacing) * 2);
     height: var(--nav-height);
   }
 

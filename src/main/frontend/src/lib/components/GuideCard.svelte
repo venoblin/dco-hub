@@ -23,17 +23,15 @@
 		padding-bottom: var(--default-spacing);
 		margin-top: var(--default-spacing);
 		border-bottom: var(--border-width) solid var(--bg-color);
-		display: flex;
-		height: 125px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--default-spacing);
+		height: 150px;
 		overflow: hidden;
 	}
 	.guide-card div:first-of-type {
-		margin-right: var(--default-spacing);
 		border-right: var(--border-width) solid var(--bg-color);
-		width: 250px;
-	}
-	.guide-card div:last-of-type {
-		width: 100%;
+		padding-right: var(--default-spacing);
 	}
 	.guide-card:first-of-type {
 		margin-top: 0;

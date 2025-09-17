@@ -7,7 +7,7 @@
   --danger-color: #c13642;
   --border-width: 1px;
   --nav-width: 200px;
-  --nav-height: 60px;
+  --nav-height: 100px;
   --default-transition: 0.1s ease-in-out;
   --default-spacing: 1rem;
   --default-border-radius: 1rem;
@@ -60,12 +60,12 @@ p {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.25em;
   margin-bottom: 0.5rem;
 }
 
@@ -130,7 +130,7 @@ main header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--default-spacing);
+  margin-bottom: calc(var(--default-spacing) * 2);
   position: sticky;
   top: 0;
 }
