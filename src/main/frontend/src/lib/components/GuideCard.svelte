@@ -24,7 +24,7 @@
 		margin-top: var(--default-spacing);
 		border-bottom: var(--border-width) solid var(--bg-color);
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 2fr;
 		gap: var(--default-spacing);
 		height: 150px;
 		overflow: hidden;
