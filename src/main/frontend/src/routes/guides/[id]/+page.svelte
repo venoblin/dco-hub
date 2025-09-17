@@ -5,9 +5,8 @@
 </script>
 
 <header>
-  <h1>{data.guide.title}</h1>
-
   <div>
+    <h1>{data.guide.title}</h1>
     <p class="muted-text">By {data.guide.author}</p>
     <p class="muted-text">Created {cleanTime(data.guide.createdAt)}</p>
     {#if data.guide.updatedAt !== data.guide.createdAt}
@@ -19,6 +18,10 @@
 <div class="content">{@html data.guide.content}</div>
 
 <style>
+  h1 {
+    margin-right: var(--default-spacing);
+  }
+  
   :global {
     .content * {
       max-width: 100%;

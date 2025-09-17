@@ -146,7 +146,7 @@ main header div a {
 }
 
 main header div p {
-  margin-right: var(--default-spacing);
+  margin-right: calc(var(--default-spacing) / 2);
 }
 
 main header div p:last-of-type {
