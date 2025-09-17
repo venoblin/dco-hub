@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import { goto } from '$app/navigation'
   import { postGuide } from '$lib/service/guidesService'
 
   let author = $state('')
@@ -34,12 +35,14 @@
       shortDescription: quill.root.innerText.slice(0, 255)
     }
 
-    await postGuide(newGuide)
+    const guide = await postGuide(newGuide)
 
     author = ''
     title = ''
     quill.root.innerHTML = ''
     quill.root.innerText = ''
+
+    goto(`/guides/${guide.id}`)
   }
   
   onMount(async () => {

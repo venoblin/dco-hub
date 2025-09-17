@@ -1,4 +1,4 @@
-import { API } from '../repository/api.js'
+import { API } from '../repository/api'
 
 export const postGuide = async (payload: GuidePayload) => {
   try {
