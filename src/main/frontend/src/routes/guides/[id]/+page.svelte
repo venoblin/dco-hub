@@ -17,3 +17,12 @@
 </header>
 
 <div class="content">{@html data.guide.content}</div>
+
+<style>
+  :global {
+    .content * {
+      max-width: 100%;
+    }
+  }
+
+</style>
