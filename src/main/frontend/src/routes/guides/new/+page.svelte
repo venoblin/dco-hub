@@ -56,14 +56,15 @@
 </script>
 
 <header>
-  <h1>New Guide</h1>
+  <div>
+    <a href="/guides">← Back</a>
+    <h1>New Guide</h1>
+  </div>
 
   <div>
     <button form="new-guide-form">Create</button>
   </div>
 </header>
-
-<a href="/guides">← Back</a>
 
 <form class="new-guide-form" id="new-guide-form" onsubmit={(event) => onSubmit(event)}>
   <div>
