@@ -31,16 +31,15 @@
       author: author,
       title: title,
       content: quill.root.innerHTML,
-      shortDescription: quill.root.innerText
+      shortDescription: quill.root.innerText.slice(0, 255)
     }
 
-    // await postGuide(newGuide)
+    await postGuide(newGuide)
 
-    console.log(quill)
-
-    // author = ''
-    // title = ''
-    // quill.root.innerHTML = ''
+    author = ''
+    title = ''
+    quill.root.innerHTML = ''
+    quill.root.innerText = ''
   }
   
   onMount(async () => {
@@ -66,7 +65,7 @@
 
 <a href="/guides">← Back</a>
 
-<form class="new-guide-form" id="new-guide-form" on:submit={(event) => onSubmit(event)}>
+<form class="new-guide-form" id="new-guide-form" onsubmit={(event) => onSubmit(event)}>
   <div>
     <label for="author">Author</label>
     <input

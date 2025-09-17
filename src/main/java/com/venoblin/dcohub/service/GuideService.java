@@ -23,6 +23,10 @@ public class GuideService {
     return guideRepository.findById(id);
   }
 
+  public void deleteSingleGuide(Long id) {
+    guideRepository.deleteById(id);
+  }
+
   public Guide createGuide(Guide newGuide) {
     return guideRepository.save(newGuide);
   }

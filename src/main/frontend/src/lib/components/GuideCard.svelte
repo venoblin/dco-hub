@@ -14,7 +14,7 @@
     {/if}
   </div>
   <div>
-    <p class="content">{guide.content}</p>
+    <p class="shortDescription">{guide.shortDescription}...</p>
   </div>
 </div>
 
