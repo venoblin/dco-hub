@@ -29,8 +29,7 @@
       modules: {
         toolbar: toolbarOptions
       },
-      theme: 'snow',
-      placeholder: 'Content'
+      theme: 'snow'
     })
   })
 </script>
