@@ -24,6 +24,9 @@ public class Guide {
   @Column(columnDefinition = "TEXT", nullable = false)
   private String content;
 
+  @Column(columnDefinition = "TEXT", nullable = false)
+  private String shortDescription;
+
   @CreatedDate
   @Column(updatable = false)
   private LocalDateTime createdAt;
@@ -56,6 +59,13 @@ public class Guide {
   }
   public void setContent(String content) {
     this.content = content;
+  }
+
+  public String getShortDescription() {
+    return this.shortDescription;
+  }
+  public void setShortDescription(String shortDescription) {
+    this.shortDescription = shortDescription;
   }
 
   public LocalDateTime getCreatedAt() {

@@ -2,6 +2,7 @@ interface GuidePayload {
   author: string
   title: string
   content: string
+  shortDescription: string
 }
 
 interface Guide extends GuidePayload {

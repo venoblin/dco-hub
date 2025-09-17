@@ -1,7 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import { postGuide } from '$lib/service/guidesService'
 
-  let quill
+  let author = $state('')
+  let title = $state('')
+
+  let quill: any
   const toolbarOptions = [
     [
       { header: [1, 2, 3, 4, 5, 6, false] },
@@ -20,6 +24,24 @@
 
     ['clean']
   ]
+
+  const onSubmit = async (event: Event) => {
+    event.preventDefault()
+    const newGuide = {
+      author: author,
+      title: title,
+      content: quill.root.innerHTML,
+      shortDescription: quill.root.innerText
+    }
+
+    // await postGuide(newGuide)
+
+    console.log(quill)
+
+    // author = ''
+    // title = ''
+    // quill.root.innerHTML = ''
+  }
   
   onMount(async () => {
     const { default: Quill } = await import('quill');
@@ -38,13 +60,13 @@
   <h1>New Guide</h1>
 
   <div>
-    <button>Create</button>
+    <button form="new-guide-form">Create</button>
   </div>
 </header>
 
 <a href="/guides">← Back</a>
 
-<form class="new-guide-form" id="new-guide-form">
+<form class="new-guide-form" id="new-guide-form" on:submit={(event) => onSubmit(event)}>
   <div>
     <label for="author">Author</label>
     <input
@@ -53,6 +75,7 @@
       name="author"
       id="author"
       placeholder="Author"
+      bind:value={author}
     />
   </div>
   <div>
@@ -63,6 +86,7 @@
       name="title"
       id="title"
       placeholder="Title"
+      bind:value={title}
     />
   </div>
   <div class="editor-container">
